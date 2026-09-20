@@ -22,7 +22,7 @@ def lectura_csv(archivo):
 
 """CARGA CON PANDAS"""
 
-def lecturapandas(archivo):
+def lectura_pandas(archivo):
     df = pd.read_csv(archivo)
     return df.columns, df
 

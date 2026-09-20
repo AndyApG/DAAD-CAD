@@ -26,7 +26,7 @@ for i in range(n):
     tiempo_inicio = time.perf_counter()
         
     # lectura con pandas
-    columnas, datos = carga.lecturapandas(ruta_archivo)
+    columnas, datos = carga.lectura_pandas(ruta_archivo)
 
     tiempo_fin = time.perf_counter()
 
