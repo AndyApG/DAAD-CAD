@@ -66,7 +66,7 @@ for i in range(n):
 
     [lista.append(i) for i in l]
 
-    print(lista)
+
     with open(ruta_experimento, mode="a", newline="", encoding="utf-8") as file:
             writer = csv.writer(file)
             writer.writerow(lista)
