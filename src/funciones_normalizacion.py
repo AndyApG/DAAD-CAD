@@ -1,4 +1,5 @@
 from text_to_num import text2num
+import math
 
 def texto_minusculas(cadena):
     """Quita espacios en blanco al final e inicio
@@ -27,6 +28,19 @@ def texto_numero(cadena):
             num = None
 
     return num
+
+def escala_calificacion(nota):
+    try:
+        if abs(nota) > 10 :
+            return abs(nota) / 10
+        else :
+            return abs(nota)
+
+    except Exception as e:
+        print("Error: ", e)
+        return math.nan
+
+    
 
 
 if __name__ == '__main__':
