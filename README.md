@@ -6,6 +6,8 @@ Este proyecto se  realiza un análisis del rendimiento de  funciones que permite
 
 El proyecto está representado en el siguiente diagrama:
 
+```text
+
 Proyecto_Primer_Parcial/
 ├── data/              # Datos de entrada y salida en archivos de csv
 ├── logs/              # Archivos de registro de commits
@@ -17,7 +19,7 @@ Proyecto_Primer_Parcial/
 ├── README.md          # Documentación del proyecto
 └── requirements.txt   # Dependencias del entorno
 
-
+```
 ## Requerimientos de reproducibilidad
 
 Este proyecto requiere **Python 3.14.7** (o superior).  
