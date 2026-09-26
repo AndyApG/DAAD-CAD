@@ -3,6 +3,7 @@ import pandas as pd
 from src import carga, nulos
 from src import funciones_normalizacion as f
 from src import analisis_carga as ac
+from src import analisis_nulos as an
 
 ruta_archivo = "data\\raw\\calificaciones_medio_superior_practica2.csv"
 ruta_salida_nulos= "outputs\\archivos\\nulos.csv"
@@ -65,11 +66,16 @@ if __name__ == "__main__":
             print(f"Los resultados de el conteo de nulos en el lote {i} se almacenaron en outputs\\archivos\\")
 
             print(f"Comparando carga de archivos en el lote {i} ...")
-            # Analisis de lectura de datos por lotes
             archivo_experimento_carga = ruta_outputs + f"datos_experimento_carga_lote_{i}.csv"
             ac.experimento(archivo_almacenamiento_lotes, archivo_experimento_carga)
 
             print(f"Los resultados de la experimentacion de  tiempos de carga para el lote {i} se almacenaron en outputs\\archivos\\")
+
+            print(f"Comparando calculo de nulos por lotes ...")
+            archivo_experimento_nulos = ruta_outputs + f"datos_experimento_conteo_nulos_lote_{i}.csv"
+            an.experimento(archivo_almacenamiento_lotes, archivo_experimento_nulos)
+            print(f"Los resultados de la experimentacion de  conteo de nulos para el lote {i} se almacenaron en outputs\\archivos\\")
+            
 
             #analisis_null.
 
