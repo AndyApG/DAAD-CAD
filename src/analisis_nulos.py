@@ -42,8 +42,8 @@ def experimento(nombre_archivo_entrada, nombre_archivo_salida, n = 5):
         [lista.append(i) for i in l]
 
         with open(nombre_archivo_salida, mode="a", newline="", encoding="utf-8") as file:
-                writer = csv.writer(file)
-                writer.writerow(lista)
+            writer = csv.writer(file)
+            writer.writerow(lista)
 
         for i in range(n):
             tiempo_inicio = time.perf_counter()
@@ -58,6 +58,6 @@ def experimento(nombre_archivo_entrada, nombre_archivo_salida, n = 5):
         [lista.append(i) for i in l]
 
         with open(nombre_archivo_salida, mode="a", newline="", encoding="utf-8") as file:
-                writer = csv.writer(file)
-                writer.writerow(lista)
+            writer = csv.writer(file)
+            writer.writerow(lista)
 

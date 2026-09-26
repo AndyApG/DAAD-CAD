@@ -25,6 +25,7 @@ def nulos_pandas(datos):
     try:
      if isinstance(datos, pd.DataFrame):
         # Conteo de nulos por columna
+
         conteo = datos.isnull().sum().to_dict()
         return conteo
     

@@ -8,6 +8,7 @@ from src import analisis_nulos as an
 ruta_archivo = "data\\raw\\calificaciones_medio_superior_practica2.csv"
 ruta_salida_nulos= "outputs\\archivos\\nulos.csv"
 
+
 if __name__ == "__main__":
     print("== Proyecto 1: Diseño de Aplicaciones para Análisis de Datos ==")
 
@@ -24,7 +25,7 @@ if __name__ == "__main__":
         print("2. Contando Nulos ....")
         conteo_nulos1 = nulos.nulos_pandas(datos_minusculas)
         df_nulos1 = pd.DataFrame([conteo_nulos1])
-        df_nulos1.to_csv("outputs\\archivos\\nulos.csv", index=False)
+        df_nulos1.to_csv(ruta_salida_nulos, index=False)
         print("Conteo de nulos en columnas en outputs\\archivos\\nulos.csv")
 
         print("3. Normalizando calificaciones de 0 a 10...")
@@ -77,12 +78,18 @@ if __name__ == "__main__":
             print(f"Los resultados de la experimentacion de  conteo de nulos para el lote {i} se almacenaron en outputs\\archivos\\")
             
 
-            #analisis_null.
-
-
+        print ("Experimentacion datos completos...")
+        print(f"Comparando carga de archivos en el lote...")
+        archivo_experimento_carga_total = ruta_outputs + f"datos_experimento_carga_total.csv"
+        ac.experimento(ruta_archivo, archivo_experimento_carga_total)
         
-
-    
+        print(f"Los resultados de la experimentacion de  tiempos de carga para el archivo completo se almacenaron en outputs\\archivos\\")
+        
+        print(f"Comparando calculo de nulos ...")
+        archivo_experimento_nulos_total = ruta_outputs + f"datos_experimento_conteo_nulos_total.csv"
+        an.experimento(ruta_archivo, archivo_experimento_nulos_total)
+        print(f"Los resultados de la experimentacion de  conteo de nulos para total de datos se almacenaron en outputs\\archivos\\")
+                    
 
 
 
