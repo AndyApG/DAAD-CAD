@@ -1,7 +1,6 @@
 import csv
 import pandas as pd
 
-
 """CARGA MANUAL"""
 
 def lectura_csv(archivo):
