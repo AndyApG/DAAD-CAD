@@ -45,11 +45,11 @@ def experimento(nombre_archivo_entrada, nombre_archivo_salida, n = 5):
             writer = csv.writer(file)
             writer.writerow(lista)
 
-        for i in range(n):
-            tiempo_inicio = time.perf_counter()
-            #nulos sin pandas
-            nul = nulos.nulos_sin_pandas(datos,df.columns)
-            tiempo_final = time.perf_counter()
+    for i in range(n):
+        tiempo_inicio = time.perf_counter()
+        #nulos sin pandas
+        nul = nulos.nulos_sin_pandas(datos,df.columns)
+        tiempo_final = time.perf_counter()
 
         tiempo = tiempo_final-tiempo_inicio
         l = list(nul.values())

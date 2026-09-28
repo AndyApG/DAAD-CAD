@@ -3,6 +3,9 @@ import pandas as pd
 
 """CARGA MANUAL"""
 
+""" Esta funcion recibe la direccion del archivo que se desea carga
+    regresa como resultado las columnas del archivo
+"""
 def lectura_csv(archivo):
     datos = []
     with open(archivo, newline='', encoding="utf-8") as csvfile:
